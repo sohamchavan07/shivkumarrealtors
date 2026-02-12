@@ -2,17 +2,20 @@ const agents = [
   {
     name: "Shivkumar Chavan",
     role: "Founder",
-    initials: "SC",
+    initials: "shivkumar",
+    image: "src/assets/shivkumar.jpg",
   },
   {
     name: "Achyut Paygude",
     role: "Partner",
     initials: "AP",
+    image: "/src/assets/agents/WhatsApp Image 2025-11-30 at 10.16.55 PM.jpeg",
   },
   {
     name: "Samiksha Chavan",
     role: "Accountant",
     initials: "SM",
+    image: "/src/assets/agents/WhatsApp Image 2025-11-30 at 10.19.19 PM.jpeg",
   },
 ];
 
@@ -37,11 +40,19 @@ const AgentsSection = () => {
             >
               {/* Avatar */}
               <div className="relative mx-auto w-48 h-56 rounded-2xl overflow-hidden mb-6 bg-gradient-to-br from-charcoal to-charcoal-light">
-                <div className="absolute inset-0 flex items-center justify-center">
-                  <span className="text-5xl font-display font-bold text-primary-foreground/30">
-                    {agent.initials}
-                  </span>
-                </div>
+                {agent.image ? (
+                  <img
+                    src={agent.image}
+                    alt={agent.name}
+                    className="w-full h-full object-cover"
+                  />
+                ) : (
+                  <div className="absolute inset-0 flex items-center justify-center">
+                    <span className="text-5xl font-display font-bold text-primary-foreground/30">
+                      {agent.initials}
+                    </span>
+                  </div>
+                )}
               </div>
 
               {/* Info */}

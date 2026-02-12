@@ -43,7 +43,7 @@ const CTASection = () => {
               className="bg-transparent text-primary-foreground border-primary-foreground/30 hover:bg-primary-foreground/10 rounded-full"
               asChild
             >
-              <a href="tel:+919876543210">
+              <a href="tel:+919060718383">
                 <Phone className="w-4 h-4 mr-2" />
                 Call Us Now
               </a>
