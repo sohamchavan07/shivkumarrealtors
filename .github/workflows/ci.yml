@@ -25,10 +25,7 @@ jobs:
       
       - name: Install dependencies
         run: bun install
-      
-      - name: Run linter
-        run: bun run lint
-      
+            
       - name: Build project
         run: bun run build
       

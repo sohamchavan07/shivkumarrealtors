@@ -70,7 +70,7 @@ const Contact = () => {
       icon: Phone,
       title: "Call Us",
       content: (
-        <a href="tel:+919060718383" className="text-muted-foreground hover:text-primary transition-colors">
+        <a href="tel:+919860718383" className="text-muted-foreground hover:text-primary transition-colors">
           +91 98765 43210
         </a>
       ),
