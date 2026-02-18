@@ -43,15 +43,44 @@ const Contact = () => {
     }
 
     setIsSubmitting(true);
-    await new Promise((resolve) => setTimeout(resolve, 1000));
 
-    toast({
-      title: "Message Sent!",
-      description: "Thank you for reaching out. Our team will contact you within 24 hours.",
-    });
+    try {
+      const response = await fetch("https://formspree.io/f/xykdpdeg", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({
+          name: formData.name,
+          email: formData.email,
+          phone: formData.phone,
+          propertyType: formData.propertyType || "Not specified",
+          message: formData.message,
+        }),
+      });
 
-    setFormData({ name: "", email: "", phone: "", propertyType: "", message: "" });
-    setIsSubmitting(false);
+      if (response.ok) {
+        toast({
+          title: "Message Sent!",
+          description: "Thank you for reaching out. Our team will contact you within 24 hours.",
+        });
+        setFormData({ name: "", email: "", phone: "", propertyType: "", message: "" });
+      } else {
+        toast({
+          title: "Error",
+          description: "Failed to send message. Please try again.",
+          variant: "destructive",
+        });
+      }
+    } catch (error) {
+      toast({
+        title: "Error",
+        description: "Failed to send message. Please try again.",
+        variant: "destructive",
+      });
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   const contactInfo = [
