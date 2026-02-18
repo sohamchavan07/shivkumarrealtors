@@ -100,7 +100,7 @@ const Footer = () => {
               <li className="flex items-center gap-3">
                 <Mail className="w-5 h-5 text-primary" />
                 <a
-                  href="mailto:info@shivkumarrealtors.com"
+                  href="mailto:shivkumarrealators@gmail.com"
                   className="text-primary-foreground/60 hover:text-primary transition-colors text-sm"
                 >
                   info@shivkumarrealtors.com
