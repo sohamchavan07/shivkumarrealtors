@@ -16,7 +16,7 @@ const Footer = () => {
               </div>
               <div>
                 <h3 className="font-display text-lg font-semibold text-primary-foreground">
-                  Shiv Kumar
+                  ShivKumarrealtors
                 </h3>
                 <p className="text-xs text-primary-foreground/60 -mt-1">Realtors</p>
               </div>
@@ -133,7 +133,7 @@ const Footer = () => {
         {/* Bottom Bar */}
         <div className="pt-8 flex flex-col md:flex-row items-center justify-between gap-4">
           <p className="text-primary-foreground/40 text-sm">
-            © {new Date().getFullYear()} Shiv Kumar Realtors. All rights reserved.
+            © {new Date().getFullYear()} Shivkumarrealtors. All rights reserved.
           </p>
           <div className="flex items-center gap-6">
             <Link to="/privacy" className="text-primary-foreground/40 hover:text-primary text-sm transition-colors">
@@ -144,7 +144,22 @@ const Footer = () => {
             </Link>
           </div>
         </div>
-      </div>
+
+        {/* Made by Section */}
+          <div className="pt-8 text-center">
+            <p className="text-primary-foreground/60 text-sm">
+              Made by{" "}
+              <a
+                href="https://www.sohamchavan.site/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-red-500 font-semibold hover:text-red-400 transition-colors"
+              >
+                SOHAM
+              </a>
+            </p>
+          </div>
+        </div>
     </footer>
   );
 };

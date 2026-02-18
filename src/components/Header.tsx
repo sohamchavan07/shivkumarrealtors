@@ -22,13 +22,7 @@ const Header = () => {
         <div className="flex items-center justify-between h-20">
           {/* Logo */}
           <Link to="/" className="flex items-center gap-2">
-            <div className="w-10 h-10 bg-primary rounded-lg flex items-center justify-center relative">
-              <Home className="w-5 h-5 text-primary-foreground" />
-              <span className="absolute -bottom-0.5 -right-0.5 text-[8px] font-bold text-primary-foreground bg-primary rounded px-0.5">SR</span>
-            </div>
-            <span className="font-display text-lg font-bold tracking-tight text-foreground uppercase">
-              ShivKumarRealtors
-            </span>
+            <img src="/logo.png" alt="ShivKumar Realtors" className="h-12 w-auto rounded-lg bg-primary-foreground/10" />
           </Link>
 
           {/* Desktop Navigation */}
