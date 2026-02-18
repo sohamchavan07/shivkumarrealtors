@@ -27,19 +27,7 @@ jobs:
         run: bun install
       
       - name: Lint code
-        run: bun run lint
-            
-      - name: Build project
-        run: bun run build
+        run: bun lint
       
-      - name: Upload build artifacts
-        uses: actions/upload-artifact@v4
-        with:
-          name: build-${{ matrix.node-version }}
-          path: dist/
-          retention-days: 5
-
-  deploy:
-    needs: build
-    runs-on: ubuntu-latest
-    if: github.ref == 'refs/heads/main' && github.event_name == 'push'
+      - name: Build project
+        run: bun build
