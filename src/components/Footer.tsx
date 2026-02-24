@@ -1,9 +1,12 @@
+import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { MapPin, Phone, Mail, Instagram, Linkedin, Facebook, Home } from "lucide-react";
 
 const Footer = () => {
+  const [email, setEmail] = useState("");
+
   return (
     <footer className="bg-charcoal pt-16 pb-8">
       <div className="container-custom">
@@ -117,9 +120,29 @@ const Footer = () => {
             <p className="text-primary-foreground/60 text-sm mb-4">
               Subscribe to receive the latest property listings and market insights.
             </p>
-            <form className="space-y-3" onSubmit={(e) => e.preventDefault()}>
+            <form
+              className="space-y-3"
+              onSubmit={(e) => {
+                e.preventDefault();
+                const emailTrim = email.trim();
+                const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+                if (!emailRegex.test(emailTrim)) {
+                  alert("Please enter a valid email address.");
+                  return;
+                }
+                const to = "shivkumarrealtors@gmail.com";
+                const subject = "Newsletter Subscription";
+                const body = `Please subscribe this email to the property updates:\n\n${emailTrim}`;
+                window.location.href = `mailto:${to}?subject=${encodeURIComponent(
+                  subject
+                )}&body=${encodeURIComponent(body)}`;
+                setEmail("");
+              }}
+            >
               <Input
                 type="email"
+                value={email}
+                onChange={(e) => setEmail((e.target as HTMLInputElement).value)}
                 placeholder="Enter your email"
                 className="bg-primary-foreground/5 border-primary-foreground/10 text-primary-foreground placeholder:text-primary-foreground/40"
               />
