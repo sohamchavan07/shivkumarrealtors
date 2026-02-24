@@ -1,21 +1,25 @@
+import shiv from "../assets/shivkumar.jpg";
+import achyut from "../assets/agents/WhatsApp Image 2025-11-30 at 10.16.55 PM.jpeg";
+import samiksha from "../assets/agents/WhatsApp Image 2025-11-30 at 10.19.19 PM.jpeg";
+
 const agents = [
   {
     name: "Shivkumar Chavan",
     role: "Founder",
     initials: "shivkumar",
-    image: "src/assets/shivkumar.jpg",
+    image: shiv,
   },
   {
     name: "Achyut Paygude",
     role: "Partner",
     initials: "AP",
-    image: "/src/assets/agents/WhatsApp Image 2025-11-30 at 10.16.55 PM.jpeg",
+    image: achyut,
   },
   {
     name: "Samiksha Chavan",
     role: "Accountant",
     initials: "SM",
-    image: "/src/assets/agents/WhatsApp Image 2025-11-30 at 10.19.19 PM.jpeg",
+    image: samiksha,
   },
 ];
 
