@@ -173,7 +173,7 @@ const Footer = () => {
             <p className="text-primary-foreground/60 text-sm">
               Made by{" "}
               <a
-                href="https://www.sohamchavan.site/"
+                href="https://www.sohamcode.online/"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="text-red-500 font-semibold hover:text-red-400 transition-colors"
